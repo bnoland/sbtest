@@ -135,8 +135,8 @@ void play(int dma_mode, unsigned long count)
 {
     int base_io_port = sb_info.base_io_port;
 
-    // Ensure that the expression "count / 2 - 1" used below doesn't become dip
-    // below zero.
+    // Ensure that the expression "count / 2 - 1" used below doesn't dip below
+    // zero.
     if (count <= 1)
         count = 2;
 
@@ -191,7 +191,7 @@ void play_and_refill_buffer(unsigned long bytes_left)
             play(DMA_SINGLE_CYCLE, count);
             while (playing_half == last_fill_half)  // Finish playing sample
                 ;
-            
+
             break;  // Done playing
         }
     } while (feof(file) == 0);
