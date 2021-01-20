@@ -46,7 +46,7 @@
 
 static SBInfo sb_info;              // Info about Sound Blaster card
 static DMABuffer dma_buf;           // DMA buffer for transferring audio data
-static WaveFileHeader wave_header;  // WAVE file wave_header
+static WaveFileHeader wave_header;  // WAVE file header
 static int volatile playing_half;   // Half of DMA buffer currently being played
 static FILE *file;                  // The input file
 
